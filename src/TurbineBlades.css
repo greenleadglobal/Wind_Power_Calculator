@@ -1,0 +1,21 @@
+
+.hub-circle, .blade-side-1 {
+    fill: #FFDB58;
+  }
+  
+  .hub-center, .blade-side-2 {
+    fill: #FFDB58;
+  }
+  
+  .hub-shine, .blade-side-2 {
+    fill: #ffffff;
+  }
+  
+  .tower {
+      fill: #FFC300;
+  
+  }
+  
+  .tower-shadow {
+      fill: #FFC300;
+  }

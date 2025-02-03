@@ -1,0 +1,96 @@
+/* TurbineCalculator component styles */
+.turbine-calculator {
+	display: flex;
+	flex-direction: row; /* Keeps elements in a row */
+	justify-content: space-between; /* Space between elements */
+	align-items: flex-start; /* Aligns to the top */
+	width: 100%;
+	padding: 2rem;
+	position: relative;
+	min-height: 100vh; /* Ensures full-page height */
+}
+
+/* Centering results in the middle of the page */
+.results-container {
+	position: absolute;
+	top: 10%; /* Moves it further up */
+	left: 50%;
+	transform: translate(-50%, -50%);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: rgba(255, 255, 255, 0.35);
+	padding: 0px;
+	border-radius: 0px;
+}
+/* Styling for the results box */
+.results {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	width: fit-content;
+	padding: 20px;
+	/* background: rgba(200, 200, 200, 0.8);  */
+	border-radius: 20px;
+	/* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
+}
+
+/* Styling for the unit inside results */
+.results .unit {
+	font-size: 1.5rem;
+	font-weight: bold;
+	color:  #046307;
+}
+
+.results h2, .results h3 {
+	/* font-weight: bold; */
+	margin: 0;
+	color: #046307;
+}
+
+.results h2 {
+	font-size: 12vh;
+	margin: 0;
+}
+
+.results h3 {
+	line-height: 1.5rem;
+	margin-top: 0;
+	font-weight: bold;
+}
+
+/* Input section on the right */
+.input-section {
+	display: flex;
+	justify-content: flex-end;
+	width: 30%; /* Keeps it on the right side */
+	margin-left: auto;
+}
+
+/* Input fields styling */
+.inputs {
+	padding: 1.5rem;
+	background-color: rgba(255, 255, 255, 0.35);
+	border-radius: 10px;
+	width: 100%;
+	margin-left: auto;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 1024px) {
+	.turbine-calculator {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.results-container {
+		top: 40%; /* Slightly adjusts for smaller screens */
+	}
+
+	.input-section {
+		width: 80%;
+		margin-top: 2rem;
+	}
+}

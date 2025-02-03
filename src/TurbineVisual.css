@@ -1,0 +1,55 @@
+/* TurbineVisual component styles */
+
+.turbine-visual, .turbine-visual .root-svg {
+    position: fixed;
+    box-sizing: border-box;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .cls-1 {
+    fill: url(#linear-gradient);
+  }
+  
+  .tower {
+    fill: url(#linear-gradient-6);
+  }
+  
+  .axil {
+    fill: url(#radial-gradient-2);
+  }
+  
+  .windstream {
+    opacity: 0.5;
+  }
+  
+  .cls-10 {
+    fill: url(#linear-gradient-7);
+  }
+  
+  .cls-11 {
+    fill: url(#linear-gradient-8);
+  }
+  
+  .cls-12 {
+    fill: url(#linear-gradient-9);
+  }
+  
+  .cls-13 {
+    fill: url(#linear-gradient-10);
+  }
+  
+  .cls-14 {
+    fill: url(#linear-gradient-11);
+  }
+  
+  .cls-15 {
+    fill: url(#linear-gradient-12);
+  }
+  
+  .cls-16 {
+    fill: url(#linear-gradient-13);
+  }
