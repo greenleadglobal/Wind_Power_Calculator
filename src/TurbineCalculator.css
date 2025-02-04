@@ -1,7 +1,7 @@
 /* TurbineCalculator component styles */
 .turbine-calculator {
 	display: flex;
-	flex-direction: row; /* Keeps elements in a row */
+	flex-direction: row; /* Desktop: elements in a row */
 	justify-content: space-between; /* Space between elements */
 	align-items: flex-start; /* Aligns to the top */
 	width: 100%;
@@ -10,19 +10,22 @@
 	min-height: 100vh; /* Ensures full-page height */
 }
 
-/* Centering results in the middle of the page */
+/* Centering results in the middle */
 .results-container {
 	position: absolute;
-	top: 10%; /* Moves it further up */
+	top: 10%;
 	left: 50%;
 	transform: translate(-50%, -50%);
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	background-color: rgba(255, 255, 255, 0.35);
-	padding: 0px;
-	border-radius: 0px;
+	padding: 20px;
+	border-radius: 10px;
+	width: auto;
+	max-width: 500px; /* Prevents overflow */
 }
+
 /* Styling for the results box */
 .results {
 	display: flex;
@@ -32,20 +35,16 @@
 	text-align: center;
 	width: fit-content;
 	padding: 20px;
-	/* background: rgba(200, 200, 200, 0.8);  */
 	border-radius: 20px;
-	/* box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); */
 }
 
-/* Styling for the unit inside results */
 .results .unit {
 	font-size: 1.5rem;
 	font-weight: bold;
-	color:  #046307;
+	color: #046307;
 }
 
 .results h2, .results h3 {
-	/* font-weight: bold; */
 	margin: 0;
 	color: #046307;
 }
@@ -76,21 +75,82 @@
 	border-radius: 10px;
 	width: 100%;
 	margin-left: auto;
+	max-width: 400px; /* Prevents overly large inputs */
 }
 
-/* Adjustments for smaller screens */
+/* Tablet Adjustments (≤1024px) */
 @media (max-width: 1024px) {
 	.turbine-calculator {
 		flex-direction: column;
 		align-items: center;
+		padding: 1rem;
 	}
 
 	.results-container {
-		top: 40%; /* Slightly adjusts for smaller screens */
+		position: relative;
+		top: auto;
+		left: auto;
+		transform: none;
+		width: 90%;
+		margin-top: 1rem;
+		padding: 15px;
+	}
+
+	.results h2 {
+		font-size: 8vh;
 	}
 
 	.input-section {
 		width: 80%;
+		justify-content: center;
 		margin-top: 2rem;
+	}
+
+	.inputs {
+		width: 100%;
+		text-align: center;
+	}
+}
+
+/* Mobile Layout (≤600px) */
+@media (max-width: 600px) {
+	.turbine-calculator {
+		padding: 1rem;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+		min-height: 100vh;
+	}
+
+	.results-container {
+		position: relative;
+		top: auto;
+		left: auto;
+		transform: none;
+		width: 90%;
+		padding: 10px;
+		margin-bottom: 1rem;
+	}
+
+	.results h2 {
+		font-size: 6vh;
+	}
+
+	.input-section {
+		width: 90%; /* Ensures input is fully visible */
+		margin-top: 1rem;
+		justify-content: center;
+		display: flex;
+	}
+
+	.inputs {
+		width: 100%;
+		padding: 1.5rem;
+		max-width: 100%; /* Forces it to take full screen width */
+	}
+
+	/* Ensure scrolling is enabled if content overflows */
+	body {
+		overflow-y: auto;
 	}
 }
