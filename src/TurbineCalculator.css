@@ -9,6 +9,19 @@
 	position: relative;
 	min-height: 100vh; /* Ensures full-page height */
 }
+.explore{
+	position: absolute;
+	top: 65%;
+	left: 45%;
+	background-color: #046307;
+	color: white;
+	font-family: 'Poppins';
+	
+
+}
+
+
+
 
 /* Centering results in the middle */
 .results-container {
@@ -110,6 +123,14 @@
 		width: 100%;
 		text-align: center;
 	}
+	.explore{
+		position: absolute;
+		top: 65%;
+		left: 45%;
+		
+	
+	}
+	
 }
 
 /* Mobile Layout (≤600px) */
@@ -153,4 +174,12 @@
 	body {
 		overflow-y: auto;
 	}
+	.explore{
+		position: absolute;
+		top: 100%;
+		left: 45%;
+		
+	
+	}
+	
 }
